@@ -5,5 +5,5 @@ Reversable.
 
 
 License
-_______
+------------
 MIT. See translation units.
