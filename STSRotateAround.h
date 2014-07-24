@@ -52,6 +52,7 @@ inline PolarCoord convertCartesianToPolar(const cocos2d::Point& p)
     return {r,a};
 }
 
+
 #pragma mark - RotateAround
 /**
  @brief Makes the target move around a center of rotation
@@ -63,7 +64,7 @@ public:
     
 	/**
      * Create the action
-     * @param duration: the duration of the flickering
+     * @param duration: the duration of the action
      * @param centerOfRotation: the point around which to rotate
      */
 	static RotateAround* create(const float duration,
