@@ -130,7 +130,7 @@ static inline CGPoint convertPolarToCartesian(const PolarCoord p)
 {
 	return [[self class] actionWithDuration:[self duration]
                            centerOfRotation:[self centerOfRotation]
-                                    reverse:[self reversed]];
+                                    reverse:YES];
 }
 
 @end
