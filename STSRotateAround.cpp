@@ -43,8 +43,8 @@ RotateAround::RotateAround(const cocos2d::Point& centerOfRotation, const bool& r
     
 }
 
-RotateAround* RotateAround::create(const float& duration,
-                                   const cocos2d::Point& centerOfRotation,
+RotateAround* RotateAround::create(const float duration,
+                                   const cocos2d::Point centerOfRotation,
                                    const bool reverse /*=false*/)
 {
 	RotateAround* pRet = new RotateAround(centerOfRotation, reverse);

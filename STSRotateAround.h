@@ -35,23 +35,22 @@ struct PolarCoord {
 };
 
 /** Converts a polar coordinate to a cartesian coordinate */
-inline cocos2d::Point convertPolarToCartesian(const PolarCoord p)
+inline cocos2d::Point convertPolarToCartesian(const PolarCoord& p)
 {
-    float rad = CC_DEGREES_TO_RADIANS(p.a);
-    float x = p.r * cosf(rad);
-    float y = p.r * sinf(rad);
+    const float rad = CC_DEGREES_TO_RADIANS(p.a);
+    const float x = p.r * cosf(rad);
+    const float y = p.r * sinf(rad);
     return cocos2d::Point(x,y);
 }
 
 /** Converts a cartesian coordinate to a polar coordinate */
 inline PolarCoord convertCartesianToPolar(const cocos2d::Point& p)
 {
-    float r = hypotf(p.x, p.y);
-    float rad = atan2f(p.y, p.x);
-    float a = CC_RADIANS_TO_DEGREES(rad);
+    const float r = hypotf(p.x, p.y);
+    const float rad = atan2f(p.y, p.x);
+    const float a = CC_RADIANS_TO_DEGREES(rad);
     return {r,a};
 }
-
 
 
 /**
@@ -67,8 +66,8 @@ public:
      * @param duration: the duration of the flickering
      * @param centerOfRotation: the point around which to rotate
      */
-	static RotateAround* create(const float& duration,
-                                const cocos2d::Point& centerOfRotation,
+	static RotateAround* create(const float duration,
+                                const cocos2d::Point centerOfRotation,
                                 const bool reverse = false);
     
 	//
